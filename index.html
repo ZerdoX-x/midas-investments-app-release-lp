@@ -243,7 +243,7 @@ params.forEach(function(value, key) {
     utmParams.push(`${key}=${value}`);
 });
 const utmSearch = utmParams.join('&');
-if (!!utmParams)
+if (!!utmSearch)
   document.querySelectorAll('a[href]').forEach(function(linkNode) {
     linkNode.href = linkNode.href + (linkNode.href.indexOf('?') === -1 ? '?' : '&') + utmSearch;
   });
